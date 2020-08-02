@@ -1,0 +1,28 @@
+.header--principal {
+  background-color: $color-variacion;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid black;
+  height: 100px;
+
+  .nav-header ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+  }
+  .nav-header a {
+    color: white;
+    padding: 0 20px;
+    font-family: $Fuente2;
+    letter-spacing: 1px;
+  }
+  img {
+    height: 100px;
+    margin-bottom: 4px;
+  }
+  .nav-header a:focus-within {
+    outline: 3px solid $color-primario;
+  }
+}
+

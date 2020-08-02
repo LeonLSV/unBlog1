@@ -1,0 +1,72 @@
+footer {
+  height: 200px;
+  background-color: white;
+  border-top: 10px solid $color-variacion;
+  @media only screen and (max-width: 768px) {
+    height: 150px;
+  }
+  p {
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+    text-decoration: none;
+    @media only screen and (max-width: 426px) {
+      padding: 5px 10px;
+      
+    }
+  }
+}
+.content--nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 50px;
+  
+}
+.content--nav .list1, .list2, .list3, .list4 {
+  list-style-type: none;
+  text-align: center;
+  padding: 0 10px;
+  cursor: pointer;
+  
+}
+.content--nav a:focus { 
+  outline: none;
+}
+.list1:focus-within { 
+  outline: 3px solid $color-primario;
+}
+.list2:focus-within { 
+  outline: 3px solid $color-primario;
+}
+.list3:focus-within { 
+  outline: 3px solid $color-primario;
+}
+.list4:focus-within { 
+  outline: 3px solid $color-primario;
+}
+
+.content--nav ul img {
+  @media only screen and (max-width: 768px) {
+    height: 30px;
+  }
+}
+.content--nav ul p {
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.button__blogs {
+  background-color: $color-primario;
+  border-radius: 20px;
+  background-size: 100px;
+  border: none;
+  height: 30px;
+  width: 140px;
+  text-decoration: none;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.50);
+}
+.button__blogs:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,8 @@
+mixin blogs(imagen, categoria, titulo, contenido)
+	section.blogs
+		figure.blogs__image: img(src="../images/"+imagen, alt="Foto blog")
+		.blogs__contenido
+			span.blogs__categoria=categoria
+			h3=titulo
+			p=contenido
+			button.button__blogs Seguir Leyendo

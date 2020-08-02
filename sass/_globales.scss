@@ -1,0 +1,32 @@
+//Variables
+$Fuente1: 'Lato', sans-serif;
+$Fuente2: 'Oswald', sans-serif;
+$color-primario: #2fad4a;
+$color-secundario: #838383;
+$color-variacion: #3f579a;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin blogs {
+  color: white;
+  border-radius: 20px;
+  background-color: $color-variacion;
+  box-shadow: 0px 20px 33px 0px rgba(0,0,0,0.50);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+  h3 {
+    font-family: $Fuente2;
+  }
+}
+      
+body {
+	background-color: #F9FAFC;
+  color: $color-primario;
+  font-family: $Fuente1;
+}
