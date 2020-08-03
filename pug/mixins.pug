@@ -1,8 +1,8 @@
 mixin blogs(imagen, categoria, titulo, contenido)
 	section.blogs
-		figure.blogs__image: img(src="./images/"+imagen, alt="Foto blog")
+		figure(tabindex="0")(aria-label="foto del blog").blogs__image: img(src="./images/"+imagen)
 		.blogs__contenido
-			span.blogs__categoria=categoria
-			h3=titulo
-			p=contenido
+			span(tabindex="0").blogs__categoria=categoria
+			h3(tabindex="0")=titulo
+			p(tabindex="0")=contenido
 			button.button__blogs Seguir Leyendo
