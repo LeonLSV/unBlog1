@@ -33,17 +33,24 @@ footer {
 .content--nav a:focus { 
   outline: none;
 }
+.list1:hover, .list2:hover, .list3:hover, .list4:hover {
+  transform: scale(1.1);  
+}
 .list1:focus-within { 
   outline: 3px solid $color-primario;
+  transform: scale(1.1);
 }
 .list2:focus-within { 
   outline: 3px solid $color-primario;
+  transform: scale(1.1);
 }
 .list3:focus-within { 
   outline: 3px solid $color-primario;
+  transform: scale(1.1);
 }
 .list4:focus-within { 
   outline: 3px solid $color-primario;
+  transform: scale(1.1);
 }
 
 .content--nav ul img {

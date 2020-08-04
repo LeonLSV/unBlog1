@@ -438,12 +438,16 @@ body {
   padding: 0 20px;
   font-family: "Oswald", sans-serif;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .header--principal img {
   height: 100px;
   margin-bottom: 4px;
 }
 .header--principal .nav-header a:focus-within {
+  outline: 3px solid #2fad4a;
+}
+.header--principal .nav-header a:hover {
   outline: 3px solid #2fad4a;
 }
 
@@ -475,6 +479,22 @@ body {
   }
 }
 
+.title {
+  animation-name: animacion;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+
+@keyframes animacion {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 .content--home img {
   width: 100%;
 }
@@ -579,8 +599,18 @@ body {
   }
 }
 
+.blogs__contenido button:hover {
+  text-decoration: none;
+}
+
+.button__blogs:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .button__blogs:focus-within {
   outline: 3px solid #2fad4a;
+  transform: scale(1.1);
 }
 
 .blogs__image {
@@ -627,20 +657,28 @@ footer p {
   outline: none;
 }
 
+.list1:hover, .list2:hover, .list3:hover, .list4:hover {
+  transform: scale(1.1);
+}
+
 .list1:focus-within {
   outline: 3px solid #2fad4a;
+  transform: scale(1.1);
 }
 
 .list2:focus-within {
   outline: 3px solid #2fad4a;
+  transform: scale(1.1);
 }
 
 .list3:focus-within {
   outline: 3px solid #2fad4a;
+  transform: scale(1.1);
 }
 
 .list4:focus-within {
   outline: 3px solid #2fad4a;
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 768px) {

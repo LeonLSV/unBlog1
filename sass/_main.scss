@@ -9,6 +9,7 @@
   background-color: black;
   margin: 0 auto;
   color: white;
+  
   @media only screen and (max-width: 768px) {
     font-size: 60px;
   }
@@ -18,8 +19,22 @@
   @media only screen and (max-width: 375px) {
     font-size: 40px;
   }
-  
-  
+}
+.title {
+  animation-name: animacion;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+  animation-direction: alternate;
+}
+@keyframes animacion{
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1  );
+  }
+
 }
 .content--home  img {
     width: 100%;
@@ -92,8 +107,17 @@
     
   }
 }
+.blogs__contenido button:hover {
+  text-decoration: none;
+}
+.button__blogs:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
 .button__blogs:focus-within {
   outline: 3px solid $color-primario;
+  transform: scale(1.1);
 }
 .blogs__image {
   margin: 0;

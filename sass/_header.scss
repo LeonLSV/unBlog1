@@ -16,6 +16,7 @@
     padding: 0 20px;
     font-family: $Fuente2;
     letter-spacing: 1px;
+    text-decoration: none;
   }
   img {
     height: 100px;
@@ -23,6 +24,9 @@
   }
   .nav-header a:focus-within {
     outline: 3px solid $color-primario;
+  }
+  .nav-header a:hover{
+    outline: 3px solid $color-primario;   
   }
 }
 
