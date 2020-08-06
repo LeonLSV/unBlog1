@@ -6,7 +6,7 @@ footer {
   flex-direction: column;
   align-items: center;
   @media only screen and (max-width: 768px) {
-    height: 150px;
+    height: 250px;
   }
   p {
     text-align: center;
@@ -14,8 +14,10 @@ footer {
     padding-top: 10px;
     text-decoration: none;
     @media only screen and (max-width: 426px) {
-      padding: 5px 10px;
-      
+      padding: 5px 10px; 
+    }
+    @media only screen and (max-width: 768px) {
+      padding: 10px 15px; 
     }
   }
 }
@@ -77,6 +79,9 @@ footer {
   /*background-size: x y;*/
   background-size: 1450px 50px;
   /*background: red;*/
+  @media only screen and (max-width: 768px) {
+    padding: 0 0 30px 0;
+  }
 }
 .like.is-liked {
   animation-name: like;
