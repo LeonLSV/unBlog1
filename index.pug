@@ -4,6 +4,15 @@ block content
     h1.title(tabindex="0")(aria-label="LSV Blog") LSV Blog
     img(tabindex="0")(src="images/cover.jpg", alt="Foto de fondo")
   section.content--blog
-    +blogs('MTW.png', "#sonidoenvivo", 'Ventanas FFT en Smaart – MTW', "Veamos para qué sirve o qué hace esta ventanita del Smaart TAN IMPORTANTE.")
-    +blogs('Ecualizar-antes-o-despues.png', "#sonidoenvivo", '¿Ecualizar antes o después del ajuste?', "En la actualidad vivimos en la era digital, con lo cual la mayoría de consolas que encontramos...")
-    +blogs('Propagacion-del-sonido.png', "#sonidoenvivo", 'Propagación del sonido', "El sonido es energía que se propaga a través de un medio. Este medio define su velocidad...")
+    div(id="blog1"): +blogs('MTW.png', "#sonidoenvivo", 'Ventanas FFT en Smaart – MTW', "Veamos para qué sirve o qué hace esta ventanita del Smaart TAN IMPORTANTE.")
+    div.blog2: +blogs('Ecualizar-antes-o-despues.png', "#sonidoenvivo", '¿Ecualizar antes o después del ajuste?', "En la actualidad vivimos en la era digital, con lo cual la mayoría de consolas que encontramos...")
+    div.blog3: +blogs('Propagacion-del-sonido.png', "#sonidoenvivo", 'Propagación del sonido', "El sonido es energía que se propaga a través de un medio. Este medio define su velocidad...")
+  section.modal
+    div.overlay.active(id="overlay")
+      div.content-modal(id="modal")
+        img(src="./images/MTW.png", alt="")
+        h3 Ventanas FFT en Smaart – MTW
+        p En resumen en esta ventana decidimos la resolución que tendrá nuestra medición. Tengamos en mente la siguiente fórmula: FR = SR/FFT. Entonces si llegamos a elegir hacer una medición con una ventana de 128 lo que pasará es que la resolución será cada 375 hz para mostrarte lo que está pasando. Es decir va a tomar una resolución cada 375 Hertz. 48.000 (Sample rate) / 128 (FFT) = 375 
+        .modal-button
+          button.button-primary(id="hide-modal") Leer completo
+          button.button-secundary(id="cancel-modal") Cerrar

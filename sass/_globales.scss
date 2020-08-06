@@ -24,9 +24,38 @@ $color-variacion: #3f579a;
     font-family: $Fuente2;
   }
 }
+@mixin buttons {
+  background-color: $color-primario;
+  border-radius: 20px;
+  background-size: 100px;
+  border: none;
+  height: 30px;
+  width: 140px;
+  text-decoration: none;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.50);
+}
+@mixin container_modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: $color-variacion;
+  width: 700px;
+  position: absolute;
+  z-index: 10;
+  border-radius: 20px;
+  padding: 30px;
+}
       
 body {
 	background-color: #F9FAFC;
   color: $color-primario;
   font-family: $Fuente1;
+}
+.button__blogs {
+  @include buttons;
+}
+.button__blogs:hover {
+  text-decoration: underline;
 }

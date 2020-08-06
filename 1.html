@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Modal</title>
+</head>
+<body>
+  <img id="image-platzi" src="platzi_img.png" alt="img_platzi">
+  <div class="overlay active" id="overlay">
+    <div class="modal" id="modal">
+      <div class="close-modal">
+        <img class="cancel-img" id="cancel" src="cancelar.png" alt="x_of_cancel">
+      </div>
+      <h1>Atention!!!</h1>
+      <div class="parrafos">
+        <p>Estas a punto de crear una ventana de Modal muy Guay</p>
+        <p>Te gusto?</p>
+      </div>
+      <div class="modal-buttons">
+        <button class="btn primary" id="hide-modal">Si, esta chido</button>
+        <button class="btn warning" id="cancel-modal">No, :(</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
+
+.modal
+{
+  display: inherit;
+  flex-direction: column;
+  width: 500px;
+  background-color: white;
+  /* animation: name time estado; */
+  animation: modalIn .8s forwards;
+  padding: 2em;
+  border-radius: .5em;
+  text-align: center;
+  justify-content: center;
+}
+
+.close-modal
+{
+  display: inherit;
+  justify-content: flex-end;
+}
+
+.cancel-img
+{
+  width: 25px;
+  height: 25px;
+  flex-direction: row-reverse;
+}
+
+.cancel-img:hover
+{
+  animation: pulses-cancel .5s alternate infinite;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.btn
+{
+  text-align: center;
+  padding: .6em .8em .8em;
+  border: none;
+  color: white;
+  background-color: lightgray;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0-.2em rgba(0, 0, 0, .2);
+  outline: 0;
+  transition: .2s;
+  will-change: transform;
+}
+
+.btn.primary
+{
+  background-color: #7dc800;
+  animation: pulses-button1s alternate infinite;
+}
+
+.btn.warning
+{
+  background-color: red;
+}
+
+.btn:active
+{
+  transform: scale(.9);
+}
+
+/* @keyframes animationIn */
+@keyframes modalIn
+{
+  0% {
+    transform: translateY(-3000px);
+  }
+
+  60%
+  {
+    transform: translateY(25px);
+  }
+
+  75%
+  {
+    transform: translateY(-10px);
+  }
+
+  90%
+  {
+    transform: translateY(5px);
+  }
+}
+
+/* @keyframes animationOut */
+@keyframes modalOut
+{
+  0%
+  {
+    transform: translateY(5px);
+  }
+  
+  60%
+  {
+    transform: translateY(-10px);
+  }
+
+  75%
+  {
+    transform: translateY(25px);
+  }
+  
+  100% {
+    transform: translateY(-3000px);
+  }
+}
+
+@keyframes pulses-cancel
+{
+  0%
+  {
+    transform: none;
+  }
+  
+  50%
+  {
+    transform: scale(1.5);
+  }
+  
+  100%
+  { 
+    transform: none;
+  }
+}
+
+@keyframes pulses-button
+{
+  0%
+  {
+    transform: none;
+  }
+  
+  50%
+  {
+    transform: scale(1.1);
+  }
+  
+  100%
+  { 
+    transform: none;
+  }
+}
+
+<!-- const hide_button = document.getElementById("hide-modal")
+const modal= document.getElementById("modal")
+const overlay = document.getElementById("overlay") -->
+<!-- const cancel_modal = document.getElementById("cancel-modal") -->
+<!-- const show_modal = document.getElementById("image-platzi") -->
+const cancel = document.getElementById("cancel")
+
+hide_button.addEventListener("click", (event) => {
+  // console.log(event);
+  modal.style.animation = "modalOut .8s forwards";
+  overlay.classList.remove("active")
+} )
+
+cancel_modal.addEventListener("click", (event) => {
+  modal.style.animation = "modalOut .8s forwards";
+  overlay.classList.remove("active")
+} )
+
+overlay.addEventListener("click", (event) => {
+  modal.style.animation = "modalOut .8s forwards";
+  overlay.classList.remove("active")
+} )
+
+show_modal.addEventListener("click", (event) => {
+  // console.log(event);
+  modal.style.animation = "modalIn .8s forwards";
+  overlay.classList.add("active")
+} )
+
+cancel.addEventListener("click", (event) => {
+  modal.style.animation = "modalOut .8s forwards";
+  overlay.classList.remove("active")
+} )
