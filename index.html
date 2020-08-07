@@ -82,14 +82,21 @@
     <link rel="stylesheet" href="./css/styless.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i|Oswald:400,500,600,700&amp;display=swap">
     <script src="https://kit.fontawesome.com/552ebddad2.js"></script>
-    <script>const $hideButton = document.getElementById('overlay'); </script>
-    <script>const $modal = document.getElementById('modal'); </script>
-    <script>const $overlay = document.getElementById('overlay'); </script>
-    <script>const $cancel_modal = document.getElementById('cancel-modal'); </script>
-    <script>const $show_modal = document.getElementById('blog1'); </script>
-    <script>$show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active"); $modal.classList.add("flex");});</script>
-    <script>const $like = document.getElementById('like');$like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});</script>
-    <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>
-    <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>
+    <script>
+      const $hideButton = document.getElementById('overlay');
+      const $modal = document.getElementById('modal'); 
+      const $overlay = document.getElementById('overlay');
+      const $cancel_modal = document.getElementById('cancel-modal'); 
+      const $show_modal = document.getElementById('blog1');
+      const $like = document.getElementById('like');
+      
+      $like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});
+      
+      $show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active"); $modal.classList.add("flex");});
+      
+      $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});  
+      
+      $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});
+    </script>
   </body>
 </html>

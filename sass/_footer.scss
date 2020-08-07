@@ -9,6 +9,7 @@ footer {
     height: 250px;
   }
   p {
+    margin:0;
     text-align: center;
     color: black;
     padding-top: 10px;
@@ -25,7 +26,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  padding: 0 50px;
+  padding: 0 80px;
   
 }
 .content--nav .list1, .list2, .list3, .list4 {
@@ -71,16 +72,15 @@ footer {
 .like {
   padding: 5px 0 20px 0;
   cursor: pointer;
-  /*width: 100px;
-  height: 100px;*/
   width: 50px;
   height: 50px;
   background-image: url('../images/corazon.png');
-  /*background-size: x y;*/
   background-size: 1450px 50px;
-  /*background: red;*/
   @media only screen and (max-width: 768px) {
     padding: 0 0 30px 0;
+  }
+  @media only screen and (max-width: 426px) {
+    padding: 0 0 50px 0; 
   }
 }
 .like.is-liked {
