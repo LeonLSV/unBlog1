@@ -17,43 +17,43 @@
       </nav><img src="./images/Emoji.png" alt="Logo LSV">
     </header>
     <mian class="content--home">
-      <h1 class="title" tabindex="0" aria-label="LSV Blog">LSV Blog</h1><img tabindex="0" src="images/cover.jpg" alt="Foto de fondo">
+      <h1 class="title">LSV Blog</h1><img src="images/cover.jpg" alt="Foto de fondo">
     </mian>
     <section class="content--blog">
       <div id="blog1">
           <section class="blogs">
-            <figure class="blogs__image" tabindex="0" aria-label="foto del blog"><img src="./images/MTW.png"></figure>
-            <div class="blogs__contenido"><span class="blogs__categoria" tabindex="0">#sonidoenvivo</span>
-              <h3 tabindex="0">Ventanas FFT en Smaart – MTW</h3>
-              <p tabindex="0">Veamos para qué sirve o qué hace esta ventanita del Smaart TAN IMPORTANTE.</p>
+            <figure class="blogs__image"><img src="./images/MTW.png" alt="Foto del blog"></figure>
+            <div class="blogs__contenido"><span class="blogs__categoria">#sonidoenvivo</span>
+              <h3>Ventanas FFT en Smaart – MTW</h3>
+              <p>Veamos para qué sirve o qué hace esta ventanita del Smaart TAN IMPORTANTE.</p>
               <button class="button__blogs">Seguir Leyendo</button>
             </div>
           </section>
       </div>
       <div class="blog2">
           <section class="blogs">
-            <figure class="blogs__image" tabindex="0" aria-label="foto del blog"><img src="./images/Ecualizar-antes-o-despues.png"></figure>
-            <div class="blogs__contenido"><span class="blogs__categoria" tabindex="0">#sonidoenvivo</span>
-              <h3 tabindex="0">¿Ecualizar antes o después del ajuste?</h3>
-              <p tabindex="0">En la actualidad vivimos en la era digital, con lo cual la mayoría de consolas que encontramos...</p>
+            <figure class="blogs__image"><img src="./images/Ecualizar-antes-o-despues.png" alt="Foto del blog"></figure>
+            <div class="blogs__contenido"><span class="blogs__categoria">#sonidoenvivo</span>
+              <h3>¿Ecualizar antes o después del ajuste?</h3>
+              <p>En la actualidad vivimos en la era digital, con lo cual la mayoría de consolas que encontramos...</p>
               <button class="button__blogs">Seguir Leyendo</button>
             </div>
           </section>
       </div>
       <div class="blog3">
           <section class="blogs">
-            <figure class="blogs__image" tabindex="0" aria-label="foto del blog"><img src="./images/Propagacion-del-sonido.png"></figure>
-            <div class="blogs__contenido"><span class="blogs__categoria" tabindex="0">#sonidoenvivo</span>
-              <h3 tabindex="0">Propagación del sonido</h3>
-              <p tabindex="0">El sonido es energía que se propaga a través de un medio. Este medio define su velocidad...</p>
+            <figure class="blogs__image"><img src="./images/Propagacion-del-sonido.png" alt="Foto del blog"></figure>
+            <div class="blogs__contenido"><span class="blogs__categoria">#sonidoenvivo</span>
+              <h3>Propagación del sonido</h3>
+              <p>El sonido es energía que se propaga a través de un medio. Este medio define su velocidad...</p>
               <button class="button__blogs">Seguir Leyendo</button>
             </div>
           </section>
       </div>
     </section>
     <section class="modal">
-      <div class="overlay active" id="overlay">
-        <div class="content-modal" id="modal"><img src="./images/MTW.png" alt="">
+      <div class="overlay" id="overlay">
+        <div class="content-modal modal-hide" id="modal"><img src="./images/MTW.png" alt="">
           <h3>Ventanas FFT en Smaart – MTW</h3>
           <p>En resumen en esta ventana decidimos la resolución que tendrá nuestra medición. Tengamos en mente la siguiente fórmula: FR = SR/FFT. Entonces si llegamos a elegir hacer una medición con una ventana de 128 lo que pasará es que la resolución será cada 375 hz para mostrarte lo que está pasando. Es decir va a tomar una resolución cada 375 Hertz. 48.000 (Sample rate) / 128 (FFT) = 375 </p>
           <div class="modal-button">
@@ -64,7 +64,7 @@
       </div>
     </section>
     <footer>
-      <p tabindex="0">Creado con HTML, Css, Preprocesadores, Responsive Design, Accesibilidad Web y Animaciones - Finalizada la 3ra semana del programa</p>
+      <p>Creado con HTML, Css, Preprocesadores, Responsive Design, Accesibilidad Web y Animaciones - Finalizada la 3ra semana del programa</p>
       <div class="like" id="like"></div>
       <nav class="content--nav">
         <ul>
@@ -87,7 +87,7 @@
     <script>const $overlay = document.getElementById('overlay'); </script>
     <script>const $cancel_modal = document.getElementById('cancel-modal'); </script>
     <script>const $show_modal = document.getElementById('blog1'); </script>
-    <script>$show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active");});</script>
+    <script>$show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active"); $modal.classList.add("flex");});</script>
     <script>const $like = document.getElementById('like');$like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});</script>
     <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>
     <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>

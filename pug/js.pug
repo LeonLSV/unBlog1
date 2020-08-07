@@ -4,12 +4,20 @@ script const $overlay = document.getElementById('overlay');
 script const $cancel_modal = document.getElementById('cancel-modal'); 
 script const $show_modal = document.getElementById('blog1'); 
 
-script $show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active");});
+script $show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active"); $modal.classList.add("flex");});
 
 script const $like = document.getElementById('like');$like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});
 
-
-//- Cerrar modal
+script $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});
 script $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});
 
-script $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});
+
+
+//- script $show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active");});
+
+//- script const $like = document.getElementById('like');$like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});
+
+//- //- Cerrar modal
+//- script $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});
+
+//- script $hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});

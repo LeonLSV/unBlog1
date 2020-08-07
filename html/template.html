@@ -17,7 +17,7 @@
       </nav><img src="./images/Emoji.png" alt="Logo LSV">
     </header>
     <footer>
-      <p tabindex="0">Creado con HTML, Css, Preprocesadores, Responsive Design, Accesibilidad Web y Animaciones - Finalizada la 3ra semana del programa</p>
+      <p>Creado con HTML, Css, Preprocesadores, Responsive Design, Accesibilidad Web y Animaciones - Finalizada la 3ra semana del programa</p>
       <div class="like" id="like"></div>
       <nav class="content--nav">
         <ul>
@@ -40,7 +40,7 @@
     <script>const $overlay = document.getElementById('overlay'); </script>
     <script>const $cancel_modal = document.getElementById('cancel-modal'); </script>
     <script>const $show_modal = document.getElementById('blog1'); </script>
-    <script>$show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active");});</script>
+    <script>$show_modal.addEventListener("click", (event) => {$modal.style.animation = "modalIn 1s forwards"; $overlay.classList.add("active"); $modal.classList.add("flex");});</script>
     <script>const $like = document.getElementById('like');$like.addEventListener('click', (event)=>{$like.classList.toggle('is-liked');});</script>
     <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>
     <script>$hideButton.addEventListener('click', (event) => {$modal.style.animation = 'modalOut 1s forwards'; $overlay.classList.remove('active');});</script>

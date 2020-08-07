@@ -147,6 +147,7 @@
   }
 }
 .content-modal {
+  display: none;
   @include container_modal;
   animation: modalIn 1.5s forwards;
 }
@@ -154,6 +155,9 @@
   width: 447px;
   padding-bottom: 10px;
   border-radius: 20px;
+}
+.flex {
+  display: flex;
 }
 @keyframes modalIn {
   0% {

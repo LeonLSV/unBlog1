@@ -661,6 +661,7 @@ body {
 }
 
 .content-modal {
+  display: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -679,6 +680,10 @@ body {
   width: 447px;
   padding-bottom: 10px;
   border-radius: 20px;
+}
+
+.flex {
+  display: flex;
 }
 
 @keyframes modalIn {
